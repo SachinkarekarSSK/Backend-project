@@ -12,6 +12,9 @@ const getinfo = async(e)=>{
     e.preventDefault()
 
     let cityvalue = cityName.value;
+
+    // here you use your app id . because this token will not work with you
+    let appid = 'e596f5e5aad98aecad3d9d2a9be8e98b'
  
     if (cityvalue === '') {
         city_name.innerText = `please write the name before you search`
@@ -20,7 +23,7 @@ const getinfo = async(e)=>{
     } else {
         try{
             console.log('under try');
-            let url = `https://api.openweathermap.org/data/2.5/weather?q=${cityvalue}&units=metric&appid=e596f5e5aad98aecad3d9d2a9be8e98b`
+            let url = `https://api.openweathermap.org/data/2.5/weather?q=${cityvalue}&units=metric&appid=${appid}`
             const response = await fetch(url)
             const data = await response.json();
             const arrdata = [data]

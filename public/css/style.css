@@ -274,6 +274,13 @@ footer p{
         height: auto;
         margin-top: 3rem ;
     }
+    .temp_form{
+        width: auto;
+    }
+
+    .temperatureinfo{
+        width: auto;
+    }
 }
 
 
